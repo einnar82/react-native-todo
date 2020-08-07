@@ -13,43 +13,59 @@ import {
   Text,
   Button,
   TextInput,
+  ScrollView,
+  FlatList,
+  Dimensions,
+  TouchableOpacity,
 } from 'react-native';
+import Header from './src/components/Header';
+import TodoItem from './src/components/TodoItem';
+import AddTodo from './src/components/AddTodo';
 
 
 const App: () => React$Node = () => {
-  const [person, setPerson] = useState({
-    name: 'mario',
-    age: '0'
-  })
+  const [todos, setTodos] = useState(
+    [{
+      text: 'buy me coffee', key: '1',
+    }, {
+      text: 'create an app', key: '2',
+    }, {
+      text: 'play on the switch', key: '3',
+    }])
 
-  const handleTextChange = (val, key) => {
-    setPerson(prevState => ({
-      ...prevState,
-      [key]: val
-    }))
+  const removeItem = (id) => {
+    setTodos(prevTodos => {
+      return prevTodos.filter(todo => todo.key !== id)
+    })
   }
 
-  const { name, age } = person
-
+  const handleSubmit = text => {
+    setTodos(prevTodos => {
+      return [
+        ...prevTodos,
+        {
+          text,
+          key: Math.random().toString()
+        }
+      ]
+    })
+  }
   return (
     <View style={styles.container}>
-      <Text>Enter Name:</Text>
-      <TextInput
-        value={name}
-        onChangeText={val => { handleTextChange(val, 'name') }}
-        style={styles.input}
-        placeholder="eg: john doe"
-      />
-      <Text>The name: {name}</Text>
-      <Text>Enter age:</Text>
-      <TextInput
-        value={age}
-        keyboardType='numeric'
-        onChangeText={val => { handleTextChange(val, 'age') }}
-        style={styles.input}
-        placeholder="eg: 99"
-      />
-      <Text>The age: {age}</Text>
+      {/** header */}
+      <Header />
+      <View style={styles.content}>
+        {/** to form */}
+        <AddTodo handleSubmit={handleSubmit} />
+        <View style={styles.list}>
+          <FlatList
+            data={todos}
+            renderItem={({ item }) => (
+              <TodoItem item={item} removeItem={removeItem} />
+            )}
+          />
+        </View>
+      </View>
     </View>
   );
 };
@@ -58,15 +74,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFF',
-    alignItems: 'center',
-    justifyContent: 'center'
   },
-  input: {
-    borderWidth: 1,
-    borderColor: '#777',
-    padding: 7,
-    margin: 20,
-    width: 200
+  content: {
+    padding: 40
+  },
+  list: {
+    marginTop: 20
   }
 });
 
