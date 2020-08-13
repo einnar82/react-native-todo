@@ -17,6 +17,9 @@ import {
   FlatList,
   Dimensions,
   TouchableOpacity,
+  Alert,
+  TouchableWithoutFeedback,
+  Keyboard
 } from 'react-native';
 import Header from './src/components/Header';
 import TodoItem from './src/components/TodoItem';
@@ -40,33 +43,48 @@ const App: () => React$Node = () => {
   }
 
   const handleSubmit = text => {
-    setTodos(prevTodos => {
-      return [
-        ...prevTodos,
+    if (text.length > 3) {
+      setTodos(prevTodos => {
+        return [
+          ...prevTodos,
+          {
+            text,
+            key: Math.random().toString()
+          }
+        ]
+      })
+    } else {
+      Alert.alert('OOPS!', 'Todos must be 3 characters long.', [
         {
-          text,
-          key: Math.random().toString()
+          text: 'Understood',
+          onPress: () => {
+            console.log('alert closed')
+          }
         }
-      ]
-    })
+      ])
+    }
   }
   return (
-    <View style={styles.container}>
-      {/** header */}
-      <Header />
-      <View style={styles.content}>
-        {/** to form */}
-        <AddTodo handleSubmit={handleSubmit} />
-        <View style={styles.list}>
-          <FlatList
-            data={todos}
-            renderItem={({ item }) => (
-              <TodoItem item={item} removeItem={removeItem} />
-            )}
-          />
+    <TouchableWithoutFeedback onPress={() => {
+      Keyboard.dismiss();
+    }}>
+      <View style={styles.container}>
+        {/** header */}
+        <Header />
+        <View style={styles.content}>
+          {/** to form */}
+          <AddTodo handleSubmit={handleSubmit} />
+          <View style={styles.list}>
+            <FlatList
+              data={todos}
+              renderItem={({ item }) => (
+                <TodoItem item={item} removeItem={removeItem} />
+              )}
+            />
+          </View>
         </View>
       </View>
-    </View>
+    </TouchableWithoutFeedback>
   );
 };
 
