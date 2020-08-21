@@ -14,6 +14,7 @@ import {
   Button,
   TextInput,
 } from 'react-native';
+import Home from './src/views/home';
 
 
 const App: () => React$Node = () => {
@@ -32,25 +33,7 @@ const App: () => React$Node = () => {
   const { name, age } = person
 
   return (
-    <View style={styles.container}>
-      <Text>Enter Name:</Text>
-      <TextInput
-        value={name}
-        onChangeText={val => { handleTextChange(val, 'name') }}
-        style={styles.input}
-        placeholder="eg: john doe"
-      />
-      <Text>The name: {name}</Text>
-      <Text>Enter age:</Text>
-      <TextInput
-        value={age}
-        keyboardType='numeric'
-        onChangeText={val => { handleTextChange(val, 'age') }}
-        style={styles.input}
-        placeholder="eg: 99"
-      />
-      <Text>The age: {age}</Text>
-    </View>
+    <Home/>
   );
 };
 
