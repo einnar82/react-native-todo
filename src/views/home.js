@@ -1,22 +1,19 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Button } from 'react-native'
+import globalStyles from '../styles/global'
 
-const Home = () => {
+const Home = (props) => {
+    console.log(props);
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>Home</Text>
+        <View style={globalStyles.container}>
+            <Text style={globalStyles.titleText}>Home</Text>
+            {/* <Button
+                title="Go to Jane's profile"
+                onPress={() =>
+                    navigation.navigate('About', { name: 'Jane' })
+                }
+            /> */}
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        padding: 24
-    },
-    text: {
-        fontFamily: 'Nunito',
-        fontSize: 30
-    }
-})
-
 export default Home;

@@ -7,6 +7,8 @@
  */
 
 import React, { useState } from 'react';
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
 import {
   StyleSheet,
   View,
@@ -15,6 +17,7 @@ import {
   TextInput,
 } from 'react-native';
 import Home from './src/views/home';
+import Routes from './src/routes';
 
 
 const App: () => React$Node = () => {
@@ -33,7 +36,9 @@ const App: () => React$Node = () => {
   const { name, age } = person
 
   return (
-    <Home/>
+    <NavigationContainer>
+      <Routes/>
+    </NavigationContainer>
   );
 };
 
