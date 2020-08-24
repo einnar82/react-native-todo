@@ -5,21 +5,21 @@ import About from '../views/about'
 
 const screens = [
     {
-        component: props => <Home />,
+        component: props => <Home {...props}/>,
         name: 'Home',
         options: {
             title: 'Welcome'
         }
     },
     {
-        component: props => <ReviewDetails />,
+        component: props => <ReviewDetails {...props}/>,
         name: 'ReviewDetails',
         options: {
             title: 'ReviewDetails'
         }
     },
     {
-        component: props => <About />,
+        component: props => <About {...props}/>,
         name: 'About',
         options: {
             title: 'About'

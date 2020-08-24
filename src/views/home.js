@@ -2,17 +2,16 @@ import React from 'react'
 import { StyleSheet, View, Text, Button } from 'react-native'
 import globalStyles from '../styles/global'
 
-const Home = (props) => {
-    console.log(props);
+const Home = ({navigation, ...props}) => {
     return (
         <View style={globalStyles.container}>
             <Text style={globalStyles.titleText}>Home</Text>
-            {/* <Button
+            <Button
                 title="Go to Jane's profile"
                 onPress={() =>
                     navigation.navigate('About', { name: 'Jane' })
                 }
-            /> */}
+            />
         </View>
     )
 }
