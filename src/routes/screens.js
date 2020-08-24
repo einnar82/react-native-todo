@@ -17,13 +17,6 @@ const screens = [
         options: {
             title: 'ReviewDetails'
         }
-    },
-    {
-        component: props => <About {...props}/>,
-        name: 'About',
-        options: {
-            title: 'About'
-        }
     }
 ]
 

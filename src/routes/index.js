@@ -5,16 +5,14 @@ const Stack = createStackNavigator();
 
 const Routes = () => (
     <Stack.Navigator initialRouteName="Home">
-        {screens.map((data, index) => {
-            return (
+        {screens.map((data, index) =>  (
                 <Stack.Screen
                     name={data.name}
                     options={data.options}
                     key={index}>
                     {data.component}
                 </Stack.Screen>
-            )
-        })}
+            ))}
     </Stack.Navigator>
 )
 
