@@ -1,7 +1,26 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import screens from './screens'
+import Home from '../views/home'
+import ReviewDetails from '../views/reviewDetails'
+
 const Stack = createStackNavigator();
+const screens = [
+    {
+        component: props => <Home {...props}/>,
+        name: 'Home',
+        options: {
+            title: 'Welcome'
+        }
+    },
+    {
+        component: props => <ReviewDetails {...props}/>,
+        name: 'ReviewDetails',
+        options: {
+            title: 'ReviewDetails'
+        }
+    }
+]
+
 
 const Routes = () => (
     <Stack.Navigator initialRouteName="Home">
