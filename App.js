@@ -17,8 +17,8 @@ import {
   TextInput,
 } from 'react-native';
 
-// import AboutStack from './src/routes/aboutStack';
-import HomeStack from './src/routes/homeStack';
+import AboutStack from './src/routes/aboutStack';
+// import HomeStack from './src/routes/homeStack';
 
 
 const App: () => React$Node = () => {
@@ -38,7 +38,7 @@ const App: () => React$Node = () => {
 
   return (
     <NavigationContainer>
-      <HomeStack/>
+      <AboutStack/>
     </NavigationContainer>
   );
 };
