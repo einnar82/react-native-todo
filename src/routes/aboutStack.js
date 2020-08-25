@@ -1,18 +1,12 @@
 import React from 'react'
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../views/home'
 import About from '../views/about'
 import HomeStack from './homeStack'
 
-const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
+
 const screens = [
-    {
-        component: props => <HomeStack {...props}/>,
-        name: 'Home',
-        options: {
-            title: 'Welcome'
-        }
-    },
     {
         component: props => <About {...props}/>,
         name: 'About',
@@ -24,16 +18,16 @@ const screens = [
 
 
 const AboutStack = () => (
-    <Drawer.Navigator initialRouteName="Home">
+    <Stack.Navigator initialRouteName="About">
         {screens.map((data, index) =>  (
-                <Drawer.Screen
+                <Stack.Screen
                     name={data.name}
                     options={data.options}
                     key={index}>
                     {data.component}
-                </Drawer.Screen>
+                </Stack.Screen>
             ))}
-    </Drawer.Navigator>
+    </Stack.Navigator>
 )
 
 export default AboutStack;
