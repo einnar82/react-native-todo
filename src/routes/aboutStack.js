@@ -1,8 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from '../views/home'
 import About from '../views/about'
-import HomeStack from './homeStack'
+import Header from '../shared/header';
 
 const Stack = createStackNavigator();
 
@@ -10,15 +9,23 @@ const screens = [
     {
         component: props => <About {...props}/>,
         name: 'About',
-        options: {
-            title: 'About'
-        }
+        options: props => ({
+            headerTitle: () => <Header {...props} title="About GameZone"/>
+        })
     }
 ]
 
 
 const AboutStack = () => (
-    <Stack.Navigator initialRouteName="About">
+    <Stack.Navigator 
+        initialRouteName="About"
+        screenOptions={{
+            headerTintColor: '#444',
+            headerStyle: {
+                backgroundColor: '#eee',
+                height: 60
+            }
+        }}>
         {screens.map((data, index) =>  (
                 <Stack.Screen
                     name={data.name}

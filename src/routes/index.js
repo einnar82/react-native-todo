@@ -24,7 +24,8 @@ const screens = [
 
 
 const MainStack = () => (
-    <Drawer.Navigator initialRouteName="Home">
+    <Drawer.Navigator 
+        initialRouteName="Home">
         {screens.map((data, index) =>  (
                 <Drawer.Screen
                     name={data.name}
