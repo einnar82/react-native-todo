@@ -17,7 +17,7 @@ const screens = [
         component: props => <ReviewDetails {...props}/>,
         name: 'ReviewDetails',
         options: {
-            title: 'ReviewDetails'
+            title: 'Review Details'
         }
     }
 ]

@@ -34,6 +34,15 @@
 		3125E427E30F44668A55ABBF /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ECFAF81594B415A9E04F465 /* Octicons.ttf */; };
 		E0E68DD0D02D4773A4D49F42 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CB387C7D1164F729949B422 /* SimpleLineIcons.ttf */; };
 		F428947AA55742B8AE894F15 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F667F06D7774F5796B16A52 /* Zocial.ttf */; };
+		71188545C67E4C1C9176EAE2 /* game_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E16A89247D4B0DB0344E77 /* game_bg.png */; };
+		0508920E295E4FC4814F0E58 /* heart_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B03D7F64F00E4634BF98E676 /* heart_logo.png */; };
+		B1C9FF05D7C94D9387DA3D7E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 881EA59B5FD44A91B91FA85E /* icon.png */; };
+		06F30125693148D8880CC4A6 /* rating-1.png in Resources */ = {isa = PBXBuildFile; fileRef = D92CF86D566C42219BCCC577 /* rating-1.png */; };
+		0C4D9EB2924D45F1883DFEF6 /* rating-2.png in Resources */ = {isa = PBXBuildFile; fileRef = C55F7FEC6EC14B2E9F4F5831 /* rating-2.png */; };
+		6264F956EBD84CBD8CC00CCB /* rating-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 07489A7CBD3044E3AE9C7A35 /* rating-3.png */; };
+		609E81BF98D54162A4000909 /* rating-4.png in Resources */ = {isa = PBXBuildFile; fileRef = ED49207BFD174C359140019A /* rating-4.png */; };
+		2A83EB2B7A104EBEAC485834 /* rating-5.png in Resources */ = {isa = PBXBuildFile; fileRef = E95EC799DC644CF6B9671417 /* rating-5.png */; };
+		19850F61E7014051BBA7EDF6 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FFCF5DA0E44899AE467360 /* splash.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +96,15 @@
 		2ECFAF81594B415A9E04F465 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1CB387C7D1164F729949B422 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		8F667F06D7774F5796B16A52 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		23E16A89247D4B0DB0344E77 /* game_bg.png */ = {isa = PBXFileReference; name = "game_bg.png"; path = "../assets/images/game_bg.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B03D7F64F00E4634BF98E676 /* heart_logo.png */ = {isa = PBXFileReference; name = "heart_logo.png"; path = "../assets/images/heart_logo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		881EA59B5FD44A91B91FA85E /* icon.png */ = {isa = PBXFileReference; name = "icon.png"; path = "../assets/images/icon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D92CF86D566C42219BCCC577 /* rating-1.png */ = {isa = PBXFileReference; name = "rating-1.png"; path = "../assets/images/rating-1.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C55F7FEC6EC14B2E9F4F5831 /* rating-2.png */ = {isa = PBXFileReference; name = "rating-2.png"; path = "../assets/images/rating-2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		07489A7CBD3044E3AE9C7A35 /* rating-3.png */ = {isa = PBXFileReference; name = "rating-3.png"; path = "../assets/images/rating-3.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ED49207BFD174C359140019A /* rating-4.png */ = {isa = PBXFileReference; name = "rating-4.png"; path = "../assets/images/rating-4.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E95EC799DC644CF6B9671417 /* rating-5.png */ = {isa = PBXFileReference; name = "rating-5.png"; path = "../assets/images/rating-5.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		34FFCF5DA0E44899AE467360 /* splash.png */ = {isa = PBXFileReference; name = "splash.png"; path = "../assets/images/splash.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +233,15 @@
 				2ECFAF81594B415A9E04F465 /* Octicons.ttf */,
 				1CB387C7D1164F729949B422 /* SimpleLineIcons.ttf */,
 				8F667F06D7774F5796B16A52 /* Zocial.ttf */,
+				23E16A89247D4B0DB0344E77 /* game_bg.png */,
+				B03D7F64F00E4634BF98E676 /* heart_logo.png */,
+				881EA59B5FD44A91B91FA85E /* icon.png */,
+				D92CF86D566C42219BCCC577 /* rating-1.png */,
+				C55F7FEC6EC14B2E9F4F5831 /* rating-2.png */,
+				07489A7CBD3044E3AE9C7A35 /* rating-3.png */,
+				ED49207BFD174C359140019A /* rating-4.png */,
+				E95EC799DC644CF6B9671417 /* rating-5.png */,
+				34FFCF5DA0E44899AE467360 /* splash.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -376,6 +403,15 @@
 				3125E427E30F44668A55ABBF /* Octicons.ttf in Resources */,
 				E0E68DD0D02D4773A4D49F42 /* SimpleLineIcons.ttf in Resources */,
 				F428947AA55742B8AE894F15 /* Zocial.ttf in Resources */,
+				71188545C67E4C1C9176EAE2 /* game_bg.png in Resources */,
+				0508920E295E4FC4814F0E58 /* heart_logo.png in Resources */,
+				B1C9FF05D7C94D9387DA3D7E /* icon.png in Resources */,
+				06F30125693148D8880CC4A6 /* rating-1.png in Resources */,
+				0C4D9EB2924D45F1883DFEF6 /* rating-2.png in Resources */,
+				6264F956EBD84CBD8CC00CCB /* rating-3.png in Resources */,
+				609E81BF98D54162A4000909 /* rating-4.png in Resources */,
+				2A83EB2B7A104EBEAC485834 /* rating-5.png in Resources */,
+				19850F61E7014051BBA7EDF6 /* splash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
