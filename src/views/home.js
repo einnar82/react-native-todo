@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { StyleSheet, View, Text, Button, Modal } from 'react-native'
+import { StyleSheet, View, Text, Button, Modal, TouchableWithoutFeedback, Keyboard } from 'react-native'
 import globalStyles from '../styles/global'
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Card from '../shared/card'
+import ReviewForm from './reviewForm';
 
 const Home = ({navigation, ...props}) => {
     const [modalOpen, setModalOpen] = useState(false)
@@ -13,18 +14,32 @@ const Home = ({navigation, ...props}) => {
         {title: 'Dude', rating: 3, body: 'dude dolor', key: '3'},
     ])
 
+    const addReview = (review) => {
+        setReviews(prevReviews => ([
+            ...prevReviews,
+            {
+                key: Math.random().toString(),
+                ...review
+            }
+        ]))
+        setModalOpen(false)
+    }
+
     return (
         <View style={globalStyles.container}>
             <Modal visible={modalOpen}>
-                <View style={styles.modalContent}>
-                    <Icon 
-                        name="close"
-                        size={24}
-                        style={{...styles.modalToggle, ...styles.modalClose}}
-                        onPress={() => setModalOpen(false)}
-                    />
-                    <Text>Hello from modal</Text>
-                </View>
+                <TouchableWithoutFeedback
+                    onPress={() => Keyboard.dismiss()}>
+                    <View style={styles.modalContent}>
+                        <Icon 
+                            name="close"
+                            size={24}
+                            style={{...styles.modalToggle, ...styles.modalClose}}
+                            onPress={() => setModalOpen(false)}
+                        />
+                        <ReviewForm addReview={addReview}/>
+                    </View>              
+                </TouchableWithoutFeedback>
             </Modal>
             <Icon 
                 name="add"
