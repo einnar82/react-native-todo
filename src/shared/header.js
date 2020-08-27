@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Image } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 // import { useNavigation } from '@react-navigation/native';
 
@@ -16,7 +16,11 @@ const Header = ({navigation, ...props}) => {
                 style={styles.icon}
                 onPress={openMenu}
                 />
-            <View>
+            <View style={styles.headerTitle}>
+                <Image 
+                    source={require('../../assets/images/heart_logo.png')}
+                    style={styles.headerImage}
+                    />
                 <Text style={styles.headerText}>{props.title}</Text>
             </View>
         </View>
@@ -40,6 +44,14 @@ const styles = StyleSheet.create({
     icon: {
         position: 'absolute',
         left: 14
+    },
+    headerImage: {
+        width: 26,
+        height: 26,
+        marginHorizontal: 10
+    },
+    headerTitle: {
+        flexDirection: 'row'
     }
 })
 

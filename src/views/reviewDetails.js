@@ -2,9 +2,9 @@ import React from 'react'
 import { StyleSheet, View, Text, Button, Image } from 'react-native'
 import globalStyles from '../styles/global'
 import Card from '../shared/card'
+import { images } from '../paths'
 
 const ReviewDetails = ({ navigation, route, ...props}) => {
-    // const rating = require('../../assets/images/rating-'+route.params.rating+'.png')
     return (
         <View style={globalStyles.container}>
             <Card>
@@ -12,9 +12,8 @@ const ReviewDetails = ({ navigation, route, ...props}) => {
                 <Text>{route.params.body}</Text>
                 <View style={styles.rating}>
                     <Text>GameZone rating: </Text>
-                    <Image source={require('../../assets/images/rating-1.png')}/>
+                    <Image source={images.ratings[route.params.rating]}/>
                 </View>
-                {/* <Text>{route.params.rating}</Text> */}
             </Card>
         </View>
     )
@@ -22,7 +21,12 @@ const ReviewDetails = ({ navigation, route, ...props}) => {
 
 const styles = StyleSheet.create({
     rating: {
-
+        flexDirection: 'row',
+        justifyContent: 'center',
+        paddingTop: 16,
+        marginTop: 16,
+        borderTopWidth: 1,
+        borderTopColor: '#eee'
     }
 })
 

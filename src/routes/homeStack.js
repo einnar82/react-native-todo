@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../views/home'
 import ReviewDetails from '../views/reviewDetails'
 import Header from '../shared/header';
+import { Image } from 'react-native';
 
 const Stack = createStackNavigator();
 const screens = [
@@ -10,7 +11,8 @@ const screens = [
         component: props => <Home {...props}/>,
         name: 'Home',
         options: props => ({
-            headerTitle: () => <Header {...props} title="GameZone"/>
+            headerTitle: () => <Header {...props} title="GameZone"/>,
+            headerBackground: () => <Image source={require('../../assets/images/game_bg.png')} style={{height:60}}/>,
         })
     },
     {
